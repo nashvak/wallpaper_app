@@ -13,9 +13,14 @@ class PhotooProvider with ChangeNotifier {
   List<ImageModel> _photos = [];
   int _page = 1;
   bool _isLoading = false;
-
+  int _selectedBtnIndex = 0;
   List<ImageModel> get photos => _photos;
   bool get isLoading => _isLoading;
+  int get selectedIndex => _selectedBtnIndex;
+  void selectButton(int index) {
+    _selectedBtnIndex = index;
+    notifyListeners(); // Notify listeners when the selected button changes
+  }
 
   Future<void> fetchPhotos() async {
     if (_isLoading) return;
@@ -71,7 +76,7 @@ class PhotooProvider with ChangeNotifier {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               backgroundColor: Colors.green,
-              content: Text("File's been saved at: ${file.path}"),
+              content: Text("image saved to gallery"),
               duration: const Duration(seconds: 2),
             ),
           );

@@ -28,8 +28,8 @@ class _HomePageState extends State<HomePage> {
       body: Consumer<PhotooProvider>(
         builder: (context, photoProvider, child) {
           return photoProvider.photos.isEmpty
-              ? Center(child: CircularProgressIndicator())
-              : PhotoGrid();
+              ? const Center(child: CircularProgressIndicator())
+              : const PhotoGrid();
         },
       ),
     );
