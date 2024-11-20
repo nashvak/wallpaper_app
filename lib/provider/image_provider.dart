@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 
 class PhotooProvider with ChangeNotifier {
   final String _apiKey =
-      "PzrwjMFFdssYI6z3sTYrAFpGwUnlnTE0Nft6rnGEsy8O6A0gKvBf6khO"; // Replace with your key.
+      "PzrwjMFFdssYI6z3sTYrAFpGwUnlnTE0Nft6rnGEsy8O6A0gKvBf6khO";
   List<ImageModel> _photos = [];
   int _page = 1;
   bool _isLoading = false;
@@ -22,12 +22,12 @@ class PhotooProvider with ChangeNotifier {
 
   void selectButton(int index) {
     _selectedBtnIndex = index;
-    notifyListeners(); // Notify listeners when the selected button changes
+    notifyListeners();
   }
 
   void changeNavigation(int index) {
     _pageIndex = index;
-    notifyListeners(); // Notify listeners when the selected button changes
+    notifyListeners();
   }
 
   Future<void> fetchPhotos() async {
@@ -82,10 +82,10 @@ class PhotooProvider with ChangeNotifier {
           ScaffoldMessenger.of(context).clearSnackBars();
 
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
+            const SnackBar(
               backgroundColor: Colors.green,
               content: Text("image saved to gallery"),
-              duration: const Duration(seconds: 2),
+              duration: Duration(seconds: 2),
             ),
           );
         }
