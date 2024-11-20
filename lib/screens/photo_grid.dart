@@ -53,7 +53,7 @@ class _PhotoGridState extends State<PhotoGrid> {
                 Row(
                   children: [
                     const CircleAvatar(
-                      backgroundImage: AssetImage("assets/flower.jpg"),
+                      backgroundImage: AssetImage("assets/girl.jpg"),
                       backgroundColor: Colors.white,
                     ),
                     const SizedBox(

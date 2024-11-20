@@ -1,16 +1,8 @@
 # wallpaper_app
 
-A new Flutter project.
+A Wallpaper app with home that lists all popular photos from pexels. The image listing are similar to pinterests image listing style. This listing have a lazy loading feature where the image loads when the user scrolls.
+On tapping the image, the high resolution image is downloaded to the device.
+Used Provider state management  and pexel api to access the images for the project
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

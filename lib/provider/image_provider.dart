@@ -17,8 +17,16 @@ class PhotooProvider with ChangeNotifier {
   List<ImageModel> get photos => _photos;
   bool get isLoading => _isLoading;
   int get selectedIndex => _selectedBtnIndex;
+  int _pageIndex = 0;
+  int get selectedPageIndex => _pageIndex;
+
   void selectButton(int index) {
     _selectedBtnIndex = index;
+    notifyListeners(); // Notify listeners when the selected button changes
+  }
+
+  void changeNavigation(int index) {
+    _pageIndex = index;
     notifyListeners(); // Notify listeners when the selected button changes
   }
 
